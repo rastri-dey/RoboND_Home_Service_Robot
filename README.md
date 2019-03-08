@@ -17,3 +17,14 @@ Following are the supporting packages to install for the project:
 **turtlebot_rviz_launchers:** With the view_navigation.launch file, you can load a preconfigured rviz workspace. You’ll save a lot of time by launching this file, because it will automatically load the robot model, trajectories, and map for you. 
 
 **turtlebot_gazebo:** With the turtlebot_world.launch you can deploy a turtlebot in a gazebo environment by linking the world file to it. 
+
+### rosdep Dependencies
+After cloning the supporting package in ``catkin_ws/src``, run rosdep on each of the package names to install their dependencies.
+rosdep -i install gmapping
+rosdep -i install turtlebot
+
+### Building the Workspace
+Use catkin to build the packages from source. From catkin_ws, run:
+catkin_make; source devel/setup.bash
+to build the workspace packages and add them to the paths of ROS.
+
