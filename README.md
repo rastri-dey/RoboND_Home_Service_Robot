@@ -20,25 +20,46 @@ Following are the supporting packages to install for the project:
 
 ### rosdep Dependencies
 After cloning the supporting package in ``catkin_ws/src``, run rosdep on each of the package names to install their dependencies.
+
 ``rosdep -i install gmapping``
 ``rosdep -i install turtlebot``
 
 ### Building the Workspace
-Use catkin to build the packages from source. From ``catkin_ws``, run:
+
+``cd catkin_ws`` 
 ``catkin_make``
 ``source devel/setup.bash``
-to build the workspace packages and add them to the paths of ROS.
+
+### Run Shell Scripts
+
+``cd src/ShellScripts`` 
+``./<ShellScriptsName.sh>``
+
+ShellScriptsName: test_slam.sh, wall_follower.sh, test_navigation.sh, pick_objects.sh,add_marker.sh, home_service.sh
 
 ### Project Content
-#### Directory Structure
-The project consists of three packages with custom ROS node in the src directory:
 
-**wall_follower:** uses a modified script provided by Udacity to instruct the robot to traverse around the room while following the walls using laser scan data.
+**wall_follower:** Allows the robot to traverse around the room following the walls with left hand side prefernce using laser scan data.
 
-**pick_objects:** is a node that publish static goals to the goal topic and thus directs the robot through the navigation packages.
+**pick_objects:** Publishes static goals to the goal topic and directs the robot through the ROS navigation stack.
 
-**add_markers:** contains two nodes that publishes markers in RViz. The add_constant_markers_node publishes markers at the goal positions with constant time intervals, while the add_markers_node publishes the markers in response to the robot's movements in the environment. Note how the second node uses the MarkerAdder class that inherits from the CustomMarkerAdder class used in the first node!
+**add_markers:** Publishes markers in RViz. 
 
-**World** file includes a Play Arena model built in Gazebo's Building Editor, and a map produced from the robot performing SLAM in the house.
-ShellScripts contains all the composite scripts to run each task of the project, and also supporting XML launch files amcl_demo.launch, gmapping_demo.launch and view_navigation.launch with customized parameters.
+**World** file includes a Play Arena model built in Gazebo's Building Editor, and a map in ``.pgm`` and ``.yaml`` format produced from the robot performing SLAM in the house.
 
+### Results
+
+**Gazebo World:** The Gazebo world built is inspired from a Play Arena format where the robot starts from a random position in the beginning and needs to come out of the maze look alike situation 
+by navigating and planning path till the goal position.
+
+The Gazebo world looks like:
+![Gazebo world](Results\1_Gazebo_world_PlayArena.jpg)
+
+wall_follower.sh constructs the following map of Gazebo world using a customized gmapping package:
+![Rviz Map](Results\2_PlayArena_Map_built_by_Wall_followerScript.jpg)
+
+Home Service Robot at pick up zone:
+![Robot At Pick Up Zone](Results\3_Turtlebot_At_Pickup_Zone.png)
+
+Home Service Robot at drop off zone:
+![Robot At Drop Off Zone](Results\5_Turtlebot_At_DropOff_Zone.png)
