@@ -53,13 +53,13 @@ ShellScriptsName: test_slam.sh, wall_follower.sh, test_navigation.sh, pick_objec
 by navigating and planning path till the goal position.
 
 The Gazebo world looks like:
-![Gazebo world](Results\1_Gazebo_world_PlayArena.jpg)
+![Gazebo world](Results/1_Gazebo_world_PlayArena.jpg)
 
 wall_follower.sh constructs the following map of Gazebo world using a customized gmapping package:
-![Rviz Map](Results\2_PlayArena_Map_built_by_Wall_followerScript.jpg)
+![Rviz Map](Results/2_PlayArena_Map_built_by_Wall_followerScript.jpg)
 
 Home Service Robot at pick up zone:
-![Robot At Pick Up Zone](Results\3_Turtlebot_At_Pickup_Zone.png)
+![Robot At Pick Up Zone](Results/3_Turtlebot_At_Pickup_Zone.png)
 
 Home Service Robot at drop off zone:
-![Robot At Drop Off Zone](Results\5_Turtlebot_At_DropOff_Zone.png)
+![Robot At Drop Off Zone](Results/5_Turtlebot_At_DropOff_Zone.png)
