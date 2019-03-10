@@ -1,6 +1,6 @@
 # RoboND_Home_Service_Robot
 
-This project is the final project of the Udacity Robotics Software Engineering Nanodegree Program. The project includes creation of several ROS packages supported by ROS libraries to simulate a home service robot for performing pick up and drop off operation in a built in Gazebo environment.
+This project is the final project of the Udacity Robotics Software Engineering Nanodegree Program. The project includes creation of several ROS packages supported by ROS libraries to simulate a home service robot for performing pick up and drop off operation in a Gazebo environment.
 
 ## Installation & Build
 ### ROS Kinetic
@@ -45,12 +45,11 @@ ShellScriptsName: test_slam.sh, wall_follower.sh, test_navigation.sh, pick_objec
 
 **add_markers:** Publishes markers in RViz. 
 
-**World** file includes a Play Arena model built in Gazebo's Building Editor, and a map in ``.pgm`` and ``.yaml`` format produced from the robot performing SLAM in the house.
+**World:** includes a Play Arena model built in Gazebo's Building Editor, and a map in ``.pgm`` and ``.yaml`` format produced from the robot performing SLAM in the house.
 
-### Results
+## Results
 
-**Gazebo World:** The Gazebo world built is inspired from a Play Arena format where the robot starts from a random position in the beginning and needs to come out of the maze look alike situation 
-by navigating and planning path till the goal position.
+**Gazebo World:** The Gazebo world constructed, is inspired from a Play Arena format where the robot starts from a random position in the beginning and needs to come out of the maze look alike situation by navigating and planning path till the end goal.
 
 The Gazebo world looks like:
 ![Gazebo world](Results/1_Gazebo_world_PlayArena.jpg)
@@ -63,3 +62,5 @@ Home Service Robot at pick up zone:
 
 Home Service Robot at drop off zone:
 ![Robot At Drop Off Zone](Results/5_Turtlebot_At_DropOff_Zone.png)
+
+The project is an amazing amalgamation of Robot building, world creation, SLAM and Path Planning, an apt project to end the course with !!
