@@ -3,6 +3,7 @@
 This project is the final project of the Udacity Robotics Software Engineering Nanodegree Program. The project includes creation of several ROS packages supported by ROS libraries to simulate a home service robot for performing pick up and drop off operation in a Gazebo environment.
 
 ## Installation & Build
+
 ### ROS Kinetic
 The project was developed on Ubuntu environment of Udacity Workspace with [ROS Kinetic](http://wiki.ros.org/kinetic), [Gazebo](http://gazebosim.org/) and [catkin](http://wiki.ros.org/catkin) installed.
 
@@ -21,19 +22,25 @@ Following are the supporting packages to install for the project:
 ### rosdep Dependencies
 After cloning the supporting package in ``catkin_ws/src``, run rosdep on each of the package names to install their dependencies.
 
-``rosdep -i install gmapping``
-``rosdep -i install turtlebot``
+```
+$ rosdep -i install gmapping
+$ rosdep -i install turtlebot
+```
 
 ### Building the Workspace
 
-``cd catkin_ws`` 
-``catkin_make``
-``source devel/setup.bash``
+```
+$ cd catkin_ws 
+$ catkin_make
+$ source devel/setup.bash
+```
 
 ### Run Shell Scripts
 
-``cd src/ShellScripts`` 
-``./<ShellScriptsName.sh>``
+```
+$ cd src/ShellScripts 
+$ ./<ShellScriptsName.sh>
+```
 
 ShellScriptsName: test_slam.sh, wall_follower.sh, test_navigation.sh, pick_objects.sh,add_marker.sh, home_service.sh
 
