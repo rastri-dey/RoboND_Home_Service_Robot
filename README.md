@@ -1,6 +1,6 @@
 # RoboND_Home_Service_Robot
 
-This project is the final project of the Udacity Robotics Software Engineering Nanodegree Program. The project includes creation of several ROS packages supported by ROS libraries to simulate a home service robot for performing pick up and drop off operation in a Gazebo environment.
+This project includes creation of several ROS packages supported by ROS libraries to simulate a home service robot for performing pick up and drop off operation in a Gazebo environment.
 
 ## Installation & Build
 
@@ -15,7 +15,7 @@ Following are the supporting packages to install for the project:
 
 **turtlebot_teleop:** With the keyboard_teleop.launch file, you can manually control a robot using keyboard commands.
 
-**turtlebot_rviz_launchers:** With the view_navigation.launch file, you can load a preconfigured rviz workspace. You’ll save a lot of time by launching this file, because it will automatically load the robot model, trajectories, and map for you. 
+**turtlebot_rviz_launchers:** With the view_navigation.launch file, you can load a preconfigured rviz workspace. Youâ€™ll save a lot of time by launching this file, because it will automatically load the robot model, trajectories, and map for you. 
 
 **turtlebot_gazebo:** With the turtlebot_world.launch you can deploy a turtlebot in a gazebo environment by linking the world file to it. 
 
